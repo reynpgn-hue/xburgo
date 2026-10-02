@@ -1,0 +1,7 @@
+XBurgo - site da hamburgueria
+1) Extraia o zip e abra index.html no navegador (precisa de internet para as fontes).
+2) Edite js/main.js: nome, WhatsApp, redes sociais, endereco e cardapio ficam no topo do arquivo.
+3) Fotos: coloque os arquivos na pasta img/ e preencha o campo img de cada lanche (ex: img:"img/x-bruto.jpg").
+4) Foto de fundo do topo: img/foto1.jpg (troque o arquivo ou edite a regra ".hero .bg" em css/style.css).
+5) Pagina da loja (clique na logo): historia, endereco (mapa) e link de avaliacao ficam em js/main.js (CFG.historia, CFG.endereco, CFG.avaliacao).
+6) Card de combo (+) nas paginas dos lanches: edite COMBO em js/main.js (nome, descricao, preco e foto em img/).
