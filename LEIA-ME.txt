@@ -8,4 +8,5 @@ XBurgo - site da hamburgueria
 7) Logo: img/logo.png (lettering recortado do cardapio). Se tiver o arquivo original da logo, troque este arquivo mantendo o nome.
 8) Patrocinador (canto superior direito do topo): edite SPONSOR em js/main.js. A logo da ReynventandoTV deve ficar em img/reynventando-tv.png.
    Se a logo estiver dentro de um HTML (PNG em base64), rode na pasta do site:  node extrair-logo.js caminho/do/arquivo.html
-   Enquanto o arquivo nao existir, o site mostra o nome "ReynventandoTV" em texto no lugar da logo.
+   Jeito facil no Windows: arraste o arquivo HTML da logo para cima do extrair-logo.bat (precisa do Node instalado).
+   A logo anima sozinha (corre para a direita com blur, volta e repete) assim que o arquivo existir. Sem o arquivo, a logo nao aparece.
