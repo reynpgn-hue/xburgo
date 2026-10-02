@@ -5,3 +5,4 @@ XBurgo - site da hamburgueria
 4) Foto de fundo do topo: img/foto1.jpg (troque o arquivo ou edite a regra ".hero .bg" em css/style.css).
 5) Pagina da loja (clique na logo): historia, endereco (mapa) e link de avaliacao ficam em js/main.js (CFG.historia, CFG.endereco, CFG.avaliacao).
 6) Card de combo (+) nas paginas dos lanches: edite COMBO em js/main.js (nome, descricao, preco e foto em img/).
+7) Logo: img/logo.png (lettering recortado do cardapio). Se tiver o arquivo original da logo, troque este arquivo mantendo o nome.

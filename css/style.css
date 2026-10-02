@@ -12,15 +12,17 @@ svg{width:1.2em;height:1.2em;fill:currentColor;flex:none}
 @keyframes tick{to{transform:translateX(-50%)}}
 /* Navegação discreta */
 nav{position:fixed;top:34px;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:12px 28px}
-nav .brand{font-family:"Bowlby One","Arial Black",Impact,sans-serif;font-size:1.05rem;text-transform:uppercase;letter-spacing:.04em;color:var(--amber);transition:.2s}
-nav .brand:hover{color:var(--orange);transform:scale(1.04)}
+nav .brand{display:block;transition:transform .2s}
+nav .brand img{display:block;height:28px;width:auto}
+nav .brand:hover{transform:scale(1.05)}
 nav .links{display:flex;gap:22px}
 nav .links a{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;opacity:.65;transition:.25s;border-bottom:1px solid transparent;padding:4px 0}
 nav .links a:hover{opacity:1;color:var(--amber);border-color:var(--amber)}
 /* Topo com foto de fundo */
 .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;padding:100px 20px 40px}
 .hero .bg{position:absolute;inset:0;z-index:0;background:linear-gradient(rgba(10,10,10,.55),rgba(10,10,10,.78)),url('../img/foto1.jpg') center 55%/cover no-repeat}
-.logo{position:relative;z-index:2;font-family:"Bowlby One","Arial Black",Impact,sans-serif;text-transform:uppercase;letter-spacing:.03em;font-size:clamp(2.8rem,9vw,5.8rem);line-height:1.05;background:linear-gradient(180deg,#fff4a8,#ffd23a 45%,#e59a00);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:8px #1a0c00;paint-order:stroke fill;filter:drop-shadow(4px 4px 0 var(--orange));text-align:center}
+.logo{position:relative;z-index:2;line-height:0}
+.logo img{display:block;width:min(74vw,480px);height:auto;filter:drop-shadow(0 4px 16px rgba(0,0,0,.65))}
 .tag{position:relative;z-index:2;color:var(--muted);letter-spacing:.3em;font-size:.75rem;text-transform:uppercase;margin:4px 0 14px}
 /* Cards girando em círculo */
 .stage{position:relative;width:min(96vw,1000px);height:min(54vh,520px);z-index:2}

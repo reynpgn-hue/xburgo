@@ -48,7 +48,6 @@ const app=document.getElementById("app");
 /* topo: letreiro, marca e botão flutuante */
 const tk=BURGERS.map(b=>`<span>${b.n.toUpperCase()}<b>${money(b.p)}</b></span>`).join("");
 document.getElementById("ticker").innerHTML=tk+tk;
-document.getElementById("navBrand").textContent=CFG.nome;
 const wf=document.getElementById("waFloat");wf.href=wa("Olá! Gostaria de fazer um pedido.");wf.innerHTML=ICON.wa;
 
 function footer(){return `<footer id="contato"><div class="f">${CFG.nome}</div>
@@ -66,7 +65,7 @@ function home(to){
     <div class="txt"><div class="head"><h3>${b.n}</h3><span class="price">${money(b.p)}</span></div><p>${b.i}.</p></div></a>`).join("");
   app.innerHTML=`
   <header class="hero"><div class="bg"></div>
-    <h1 class="logo">${CFG.nome}</h1><div class="tag">Hamburgueria artesanal</div>
+    <h1 class="logo"><img src="img/logo.png" alt="${CFG.nome}"></h1><div class="tag">Hamburgueria artesanal</div>
     <div class="stage">${HERO.map(h=>`<div class="orb" onclick="location.hash='${h.to}'"><img src="${h.img}" alt=""></div>`).join("")}</div>
     <div class="dots"><i></i><i></i><i></i></div>
   </header>
