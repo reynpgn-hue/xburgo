@@ -6,4 +6,4 @@ XBurgo - site da hamburgueria
 5) Pagina da loja (clique na logo): historia, endereco (mapa) e link de avaliacao ficam em js/main.js (CFG.historia, CFG.endereco, CFG.avaliacao).
 6) Card de combo (+) nas paginas dos lanches: edite COMBO em js/main.js (nome, descricao, preco e foto em img/).
 7) Logo: img/logo.png (lettering recortado do cardapio). Se tiver o arquivo original da logo, troque este arquivo mantendo o nome.
-8) Patrocinador (canto superior direito do topo): a logo animada e o botao! Clicar nela abre o TikTok @r3ynd4. Edite SPONSOR em js/main.js (link, texto "patrocinador oficial"). A animacao fica em img/reynventando-tv.webp.
+8) Patrocinador (canto superior direito do topo): a logo animada e o botao! Clicar nela abre o TikTok @r3ynd4. Edite SPONSOR em js/main.js (link, texto "patrocinador oficial"). A logo e img/reynventando-tv.png (fundo transparente) e flutua devagar em loop infinito (animacao float em css/style.css).

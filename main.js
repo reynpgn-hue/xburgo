@@ -17,24 +17,7 @@ const CFG={
 };
 /* ===== COMBO (card com +): foto e valor de exemplo. Para um lanche específico, use combo:{...} dentro dele ===== */
 /* ===== PATROCINADOR (canto superior direito do topo) ===== */
-const SPONSOR={tiktok:"https://www.tiktok.com/@r3ynd4",handle:"@r3ynd4",logo:"img/reynventando-tv.png",nome:"ReynventandoTV",texto:"um patrocínio de reynventandoTV"};
-let spTl=null;
-/* Animação da logo (mesma do logo-loop: corre p/ a direita com blur de velocidade, volta, leve deslocamento; 4s em loop) */
-function sponsorAnim(){
-  const img=document.querySelector(".sponsor img"),bl=document.getElementById("spBlur");
-  if(!img||!window.gsap||matchMedia("(prefers-reduced-motion:reduce)").matches)return;
-  const D=28,B=6,Z="0.01 0",tl=gsap.timeline({repeat:-1});
-  tl.fromTo(img,{x:0},{x:D,duration:.6,ease:"power3.inOut"},.2)
-    .fromTo(bl,{attr:{stdDeviation:Z}},{attr:{stdDeviation:B+" 0"},duration:.3,ease:"sine.in"},.2)
-    .to(bl,{attr:{stdDeviation:Z},duration:.3,ease:"sine.out"},.5)
-    .to(img,{x:0,duration:.6,ease:"power3.inOut"},.95)
-    .to(bl,{attr:{stdDeviation:B+" 0"},duration:.3,ease:"sine.in"},.95)
-    .to(bl,{attr:{stdDeviation:Z},duration:.3,ease:"sine.out"},1.25)
-    .to(img,{x:3,y:-2,duration:.8,ease:"sine.inOut"},1.85)
-    .to(img,{x:0,y:0,duration:.8,ease:"sine.inOut"},2.65)
-    .set({},{},4);
-  spTl=tl;
-}
+const SPONSOR={tiktok:"https://www.tiktok.com/@r3ynd4",logo:"img/reynventando-tv.png",nome:"ReynventandoTV",texto:"patrocinador oficial"};
 const COMBO={nome:"Combo",desc:"Batata + refrigerante",preco:12.9,img:""}; // img: "img/combo.jpg"
 /* ===== CARDÁPIO: "img" = caminho da foto (ex: "img/x-bruto.jpg") ===== */
 const BASE="Carne 125g, queijo, catupiry";
@@ -85,8 +68,7 @@ function home(to){
   app.innerHTML=`
   <header class="hero"><div class="bg"></div>
     <div class="sponsor">
-      <a class="tk" href="${SPONSOR.tiktok}" target="_blank" rel="noopener">${ICON.tt}<span>${SPONSOR.handle}</span></a>
-      <img src="${SPONSOR.logo}" alt="${SPONSOR.nome}" onerror="this.style.display='none'">
+      <a class="spon-logo" href="${SPONSOR.tiktok}" target="_blank" rel="noopener" aria-label="TikTok @r3ynd4 - ${SPONSOR.nome}"><img src="${SPONSOR.logo}" alt="${SPONSOR.nome}"></a>
       <small>${SPONSOR.texto}</small>
     </div>
     <h1 class="logo"><img src="img/logo.png" alt="${CFG.nome}"></h1><div class="tag">Hamburgueria artesanal</div>
@@ -96,7 +78,7 @@ function home(to){
   <section class="menu" id="cardapio">
     <div class="title"><h2>Cardápio<em>${CFG.nome}</em></h2></div>${rows}
   </section>${footer()}`;
-  orbit();sponsorAnim();
+  orbit();
   if(to){setTimeout(()=>document.getElementById(to).scrollIntoView(),30)}else scrollTo(0,0);
 }
 let raf=0;
@@ -146,7 +128,6 @@ function sobre(){
   scrollTo(0,0);
 }
 function route(){
-  if(spTl){spTl.kill();spTl=null}
   const h=location.hash||"#/",m=h.match(/^#\/lanche\/(\d+)/);
   if(m)return detail(+m[1]);
   if(h==="#/sobre")return sobre();
