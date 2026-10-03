@@ -17,7 +17,7 @@ const CFG={
 };
 /* ===== COMBO (card com +): foto e valor de exemplo. Para um lanche específico, use combo:{...} dentro dele ===== */
 /* ===== PATROCINADOR (canto superior direito do topo) ===== */
-const SPONSOR={tiktok:"https://www.tiktok.com/@r3ynd4",handle:"@r3ynd4",logo:"img/reynventando-tv.png",nome:"ReynventandoTV",texto:"um patrocínio de reynventandoTV"};
+const SPONSOR={tiktok:"https://www.tiktok.com/@r3ynd4",logo:"img/reynventando-tv.webp",nome:"ReynventandoTV",texto:"patrocinador oficial"};
 const COMBO={nome:"Combo",desc:"Batata + refrigerante",preco:12.9,img:""}; // img: "img/combo.jpg"
 /* ===== CARDÁPIO: "img" = caminho da foto (ex: "img/x-bruto.jpg") ===== */
 const BASE="Carne 125g, queijo, catupiry";
@@ -68,9 +68,7 @@ function home(to){
   app.innerHTML=`
   <header class="hero"><div class="bg"></div>
     <div class="sponsor">
-      <a class="tk" href="${SPONSOR.tiktok}" target="_blank" rel="noopener">${ICON.tt}<span>${SPONSOR.handle}</span></a>
-      <img src="${SPONSOR.logo}" alt="${SPONSOR.nome}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-      <span class="spon-fb">${SPONSOR.nome}</span>
+      <a class="spon-logo" href="${SPONSOR.tiktok}" target="_blank" rel="noopener" aria-label="TikTok @r3ynd4 - ${SPONSOR.nome}"><img src="${SPONSOR.logo}" alt="${SPONSOR.nome}"></a>
       <small>${SPONSOR.texto}</small>
     </div>
     <h1 class="logo"><img src="img/logo.png" alt="${CFG.nome}"></h1><div class="tag">Hamburgueria artesanal</div>

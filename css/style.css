@@ -26,12 +26,11 @@ nav .links a:hover{opacity:1;color:var(--amber);border-color:var(--amber)}
 .tag{position:relative;z-index:2;color:var(--muted);letter-spacing:.3em;font-size:.75rem;text-transform:uppercase;margin:4px 0 14px}
 /* Patrocinador */
 .sponsor{position:absolute;top:96px;right:24px;z-index:6;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
-.sponsor .tk{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:999px;background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.28);color:var(--text);font-size:.78rem;backdrop-filter:blur(4px);transition:.2s}
-.sponsor .tk:hover{background:var(--orange);border-color:var(--orange);color:#1c1c1c;transform:translateY(-2px)}
-.sponsor img{display:block;width:130px;height:auto;filter:drop-shadow(0 3px 10px rgba(0,0,0,.6))}
-.spon-fb{display:none;font-family:Anton,Impact,sans-serif;letter-spacing:.05em;color:var(--amber);font-size:1.1rem;text-transform:uppercase}
-.sponsor small{font-size:.62rem;letter-spacing:.06em;color:var(--muted);opacity:.85}
-@media(max-width:820px){.sponsor{position:relative;top:auto;right:auto;margin-bottom:14px}.sponsor img{width:100px}}
+.spon-logo{display:block;line-height:0}
+.sponsor img{display:block;width:270px;height:auto;transition:filter .25s,transform .25s}
+.spon-logo:hover img{filter:brightness(1.2) drop-shadow(0 0 10px rgba(255,122,26,.55));transform:scale(1.03)}
+.sponsor small{font-size:.62rem;letter-spacing:.1em;margin-top:-2px;color:var(--muted);opacity:.85}
+@media(max-width:820px){.sponsor{position:relative;top:auto;right:auto;margin-bottom:14px}.sponsor img{width:210px}}
 /* Cards girando em círculo */
 .stage{position:relative;width:min(96vw,1000px);height:min(54vh,520px);z-index:2}
 .orb{position:absolute;left:50%;top:0;height:100%;aspect-ratio:4/5;border-radius:22px;overflow:hidden;cursor:pointer;box-shadow:0 24px 50px rgba(0,0,0,.6);will-change:transform}
