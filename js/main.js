@@ -17,7 +17,7 @@ const CFG={
 };
 /* ===== COMBO (card com +): foto e valor de exemplo. Para um lanche específico, use combo:{...} dentro dele ===== */
 /* ===== PATROCINADOR (canto superior direito do topo) ===== */
-const SPONSOR={tiktok:"https://www.tiktok.com/@r3ynd4",logo:"img/reynventando-tv.webp",nome:"ReynventandoTV",texto:"patrocinador oficial"};
+const SPONSOR={tiktok:"https://www.tiktok.com/@r3ynd4",logo:"img/reynventando-tv.png",nome:"ReynventandoTV",texto:"patrocinador oficial"};
 const COMBO={nome:"Combo",desc:"Batata + refrigerante",preco:12.9,img:""}; // img: "img/combo.jpg"
 /* ===== CARDÁPIO: "img" = caminho da foto (ex: "img/x-bruto.jpg") ===== */
 const BASE="Carne 125g, queijo, catupiry";
